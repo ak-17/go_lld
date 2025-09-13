@@ -1,12 +1,14 @@
 package bufferedqueue
 
 import (
-	"github.com/stretchr/testify/assert"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 func Test_BufferedQueue(t *testing.T) {
 	bq := NewBufferedQueue(5)
+	assert.NotNil(t, bq)
 	assert.NotNil(t, bq)
 	assert.True(t, bq.IsEmpty()) // []
 	assert.EqualValues(t, 0, bq.Len())
